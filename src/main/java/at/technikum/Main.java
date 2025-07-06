@@ -1,16 +1,16 @@
 package at.technikum;
 
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Geben Sie eine Zahl ein: ");
-        int n = sc.nextInt();
-
-        sc.close();
-
-        }
+        TicTacToe game = new TicTacToe(); // Spielobjekt erstellen
+        game.printBoard(); // Board ausgeben
     }
-    // Test Commit
+
+    public void printBoard() {
+        // Spielfeld wird schön formatiert ausgegeben
+    }
+}
+
+
+

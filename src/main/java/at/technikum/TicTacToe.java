@@ -27,6 +27,5 @@ public class TicTacToe {
                 System.out.println("---+---+---");
             }
         }
-
     }
 }
