@@ -6,7 +6,9 @@ public class Main {
     public static void main(String[] args) {
         TicTacToe game = new TicTacToe();
         Scanner scanner = new Scanner(System.in);
+        TicTacToe game = new TicTacToe();
 
+      feature/game-logic
         System.out.println("Willkommen bei Tic Tac Toe!");
         game.printBoard();
 
@@ -25,3 +27,4 @@ public class Main {
         System.out.println("Spiel beendet!");
     }
 }
+
