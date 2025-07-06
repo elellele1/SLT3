@@ -74,4 +74,22 @@ public class TicTacToe {
     public char getCurrentPlayer() {
         return currentPlayer;
     }
+    public boolean isGameOver() {
+        // Prüfe auf Sieg
+        if (checkWin('X') || checkWin('O')) {
+            return true;
+        }
+
+        // Prüfe auf Unentschieden (kein Feld mehr frei)
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[i][j] == ' ') {
+                    return false; // Noch nicht vorbei
+                }
+            }
+        }
+
+        return true; // Niemand hat gewonnen, aber alles voll = Unentschieden
+    }
+
 }
