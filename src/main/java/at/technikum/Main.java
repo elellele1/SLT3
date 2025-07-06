@@ -4,33 +4,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
         Scanner scanner = new Scanner(System.in);
         TicTacToe game = new TicTacToe();
 
-        while (true) {
-            game.printBoard();
-            System.out.println("Spieler " + game.getCurrentPlayer() + ", gib deine Zeile (0-2) ein:");
+      feature/game-logic
+        System.out.println("Willkommen bei Tic Tac Toe!");
+        game.printBoard();
+
+        while (!game.isGameOver()) {
+            System.out.println("Spieler " + game.getCurrentPlayer() + ", gib deine Position ein (Zeile und Spalte von 0 bis 2): ");
             int row = scanner.nextInt();
-            System.out.println("Spieler " + game.getCurrentPlayer() + ", gib deine Spalte (0-2) ein:");
             int col = scanner.nextInt();
 
-            if (game.placeMove(row, col)) {
-                if (game.checkWin()) {
-                    game.printBoard();
-                    System.out.println("Spieler " + game.getCurrentPlayer() + " gewinnt!");
-                    break;
-                } else if (game.isBoardFull()) {
-                    game.printBoard();
-                    System.out.println("Unentschieden!");
-                    break;
-                } else {
-                    game.changePlayer();
-                }
+            if (game.makeMove(row, col)) {
+                game.printBoard();
             } else {
-                System.out.println("Ungültiger Zug. Versuche es nochmal.");
+                System.out.println("Ungültiger Zug, versuch es nochmal.");
             }
         }
 
-        scanner.close();
+        System.out.println("Spiel beendet!");
     }
 }
+
