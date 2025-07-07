@@ -3,6 +3,8 @@ package at.technikum;
 public class TicTacToe {
     private char[][] board;
     private char currentPlayer;
+    private char player1;
+    private char player2;
 
     public TicTacToe() {
         board = new char[3][3];
@@ -66,5 +68,12 @@ public class TicTacToe {
         }
         System.out.println();
     }
-}
+    public void switchCurrentPlayer() {
+            if (currentPlayer == player1) {
+                currentPlayer = player2;
+            } else {
+                currentPlayer = player1;
+            }
+        }
 
+    }
