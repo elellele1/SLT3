@@ -43,4 +43,5 @@ public class Board {
     public char[][] getCells() {
         return cells;
     }
+
 }
